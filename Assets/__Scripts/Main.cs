@@ -47,6 +47,21 @@ public class Main : MonoBehaviour
         // Снова вызвать SpawnEnemy()
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
     }
+    /// <summary>
+    /// Метод перезапуска игры через delay секуд
+    /// </summary>
+    public void DelayedRestart(float delay)
+    {
+        Invoke("Restart", delay);
+    }
+
+    /// <summary>
+    /// Метод перезапуска игры
+    /// </summary>
+    public void Restart()
+    {
+        SceneManager.LoadScene("_Scene_0");
+    }
 
     // Start is called before the first frame update
     void Start()

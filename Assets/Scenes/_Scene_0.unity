@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1c551fb8a44cd034ca8ec68040db5b5b, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9ccb7e724b3e70047875a8c4676d77ed, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -277,7 +277,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -613,6 +613,9 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pichMult: 30
+  gameRestartDelay: 2
+  projectilePerfab: {fileID: 5867220477529863147, guid: 6a75192b0d6ac3b4897abf89d3864620, type: 3}
+  projectileSpeed: 40
   _shildLevel: 4
 --- !u!4 &1937536787
 Transform:

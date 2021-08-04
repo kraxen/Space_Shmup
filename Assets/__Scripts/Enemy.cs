@@ -58,4 +58,22 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    /// <summary>
+    /// Реализация смерти кораблей от выстрелов
+    /// </summary>
+    /// <param name="coll">снаряд</param>
+    private void OnCollisionEnter(Collision coll)
+    {
+        GameObject otherGo = coll.gameObject;
+        if(otherGo.tag == "ProjectileHero")
+        {
+            Destroy(gameObject); // Уничтожить корабль противника
+            Destroy(otherGo);   // Уничтожить снаряд
+        }
+        else
+        {
+            print("Enemy hit by non-ProjectileHero: " + otherGo.name);
+        }
+    }
 }
