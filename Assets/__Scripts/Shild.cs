@@ -25,7 +25,7 @@ public class Shild : MonoBehaviour
     void Update()
     {
         // Прочитать текущую мощность защитного поля из объекта-одиночки Hero
-        int currLevel = Mathf.FloorToInt(Hero.S.shildLevel);
+        int currLevel = Mathf.FloorToInt(Hero.S.shieldLevel);
         // Если она отличается от levelShown...
         if(levelShown != currLevel)
         {

@@ -14,7 +14,13 @@ public class Hero : MonoBehaviour
     public float pichMult = 30;
 
     [Header("Set Dynamiclly")]
-    public float shildLevel = 1;
+    [SerializeField]
+    public float _shildLevel = 4;
+
+    /// <summary>
+    /// Ссыллка на последний объект с которым было столкновение
+    /// </summary>
+    private GameObject lastTriggerGo = null;
 
     private void Awake()
     {
@@ -48,5 +54,45 @@ public class Hero : MonoBehaviour
 
         // Повернуть корабль, чтобы придать ощущение динамики
         transform.rotation = Quaternion.Euler(yAxis * pichMult, xAxis * rollMult,0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {        
+        Transform rootT = other.gameObject.transform.root;
+        GameObject go = rootT.gameObject;
+        //print("Triggered: " + go.name);
+
+        // Гарантировать невозможность повторного столкновения
+        if(go == lastTriggerGo)
+        {
+            return;
+        }
+        lastTriggerGo = go;
+
+        if(go.tag == "Enemy")   // Если защитное поле столкнулось с вражеским кораблем
+        {                       //
+            shieldLevel--;       // Уменьшить уровень защиты на 1
+            Destroy(go);        // И уничтожить вражеский корабль
+        }
+        else
+        {
+            print("Triggered by non Enemy: " + go.name);
+        }
+    }
+
+    public float shieldLevel
+    {
+        get
+        {
+            return (_shildLevel);
+        }
+        set
+        {
+            _shildLevel = Mathf.Min(value, 4);
+            if (value < 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

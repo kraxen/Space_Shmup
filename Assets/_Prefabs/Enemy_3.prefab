@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6820208828116262236}
   - component: {fileID: 9217798796486703212}
   - component: {fileID: 3759340978205644759}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 6882580925852443738}
   - component: {fileID: 5203057860965082074}
   - component: {fileID: 9031202048998346542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CockpitL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 6678919010396326974}
   - component: {fileID: 553490039761541}
   - component: {fileID: 3427791537614547150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CockpitR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,9 +297,9 @@ GameObject:
   - component: {fileID: 2459474875933785658}
   - component: {fileID: -352428104191637239}
   - component: {fileID: 7104300376632734765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,3 +370,7 @@ MonoBehaviour:
   isOnScreen: 1
   camWidth: 0
   camHeight: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 175522681}
   - component: {fileID: 175522680}
   - component: {fileID: 175522679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525190116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 1465983915}
   - component: {fileID: 1465983914}
   - component: {fileID: 1465983913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,9 +575,9 @@ GameObject:
   - component: {fileID: 1937536786}
   - component: {fileID: 1937536785}
   - component: {fileID: 1937536788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: _Hero
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pichMult: 30
-  shildLevel: 1
+  _shildLevel: 4
 --- !u!4 &1937536787
 Transform:
   m_ObjectHideFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 2070446944}
   - component: {fileID: 2070446943}
   - component: {fileID: 2070446942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070446940}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
