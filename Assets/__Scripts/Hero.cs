@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Класс, в котором описано движение по поворот корабля
+/// </summary>
 public class Hero : MonoBehaviour
 {
     static public Hero S; // Одиночка
@@ -39,8 +42,8 @@ public class Hero : MonoBehaviour
 
         // Изменить transform.position, опираясь на информацию по осям
         Vector3 pos = transform.position;
-        pos.x = xAxis * speed * Time.deltaTime;
-        pos.y = yAxis * speed * Time.deltaTime;
+        pos.x += xAxis * speed * Time.deltaTime;
+        pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
 
         // Повернуть корабль, чтобы придать ощущение динамики
