@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 23769d2872cdfa544bdeefe1ae57abfa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,8 +105,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3642082934041146690}
   - component: {fileID: 4836671307019774903}
-  - component: {fileID: 3727047484997721085}
-  - component: {fileID: 2151441217781494109}
+  - component: {fileID: -3077281716930421229}
+  - component: {fileID: 3962273051632508978}
   m_Layer: 9
   m_Name: Enemy_1
   m_TagString: Enemy
@@ -146,7 +146,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &3727047484997721085
+--- !u!114 &-3077281716930421229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,14 +155,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7447909109135934442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21eb90c56e383f248976971125444328, type: 3}
+  m_Script: {fileID: 11500000, guid: 954db15ce64215e418a15f5d798d8d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
   fireRate: 0.3
   health: 10
   score: 100
---- !u!114 &2151441217781494109
+  waveFrequency: 2
+  waveWidth: 4
+  waveRotY: 45
+--- !u!114 &3962273051632508978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +197,7 @@ GameObject:
   - component: {fileID: 888868213497827539}
   - component: {fileID: 7229530364830775112}
   - component: {fileID: 824884575551989651}
-  - component: {fileID: 7923672051575732862}
+  - component: {fileID: 5670552552225642440}
   m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
@@ -243,7 +246,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 94633643172b9ca4fb4ed6ae1e451532, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265,8 +268,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7923672051575732862
-SphereCollider:
+--- !u!136 &5670552552225642440
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -275,6 +278,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}

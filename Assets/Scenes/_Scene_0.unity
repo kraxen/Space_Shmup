@@ -188,7 +188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 94633643172b9ca4fb4ed6ae1e451532, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,6 +249,68 @@ Transform:
   m_Father: {fileID: 1937536787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1001 &600693366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1937536787}
+    m_Modifications:
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412934062106515905, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+--- !u!4 &600693367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3041435528244900352, guid: 54b8b5b85559f4a45beefdd4a1d750f4, type: 3}
+  m_PrefabInstance: {fileID: 600693366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,9 +506,36 @@ MonoBehaviour:
   - {fileID: 7447909109135934442, guid: 7e313adcbb40f8f47a3f3aba42b4e077, type: 3}
   - {fileID: 6932183454642718343, guid: c43a318c0b60602499c48d4f97d63a63, type: 3}
   - {fileID: 8750111133550089195, guid: ebfb8d195b4b12446828843836db477d, type: 3}
-  - {fileID: 5145662035147931013, guid: 5834bebb9365b2243b7c1b6400528a97, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 0.5
+  weaponDefinition:
+  - type: 1
+    letter: B
+    color: {r: 1, g: 1, b: 1, a: 1}
+    projectilePerfab: {fileID: 5867220477529863147, guid: 6a75192b0d6ac3b4897abf89d3864620, type: 3}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
+    damageOnHit: 1
+    continuousDamage: 0
+    dalayBetweenShots: 0.2
+    velocity: 50
+  - type: 2
+    letter: S
+    color: {r: 0, g: 0, b: 1, a: 1}
+    projectilePerfab: {fileID: 5867220477529863147, guid: 6a75192b0d6ac3b4897abf89d3864620, type: 3}
+    projectileColor: {r: 0, g: 0, b: 1, a: 1}
+    damageOnHit: 1
+    continuousDamage: 0
+    dalayBetweenShots: 0.4
+    velocity: 50
+  - type: 6
+    letter: O
+    color: {r: 0, g: 1, b: 0, a: 1}
+    projectilePerfab: {fileID: 0}
+    projectileColor: {r: 0, g: 1, b: 0, a: 1}
+    damageOnHit: 0
+    continuousDamage: 0
+    dalayBetweenShots: 0
+    velocity: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5c17dd7a432aa7945879924d60222686, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -631,6 +720,7 @@ Transform:
   - {fileID: 175522678}
   - {fileID: 525190116}
   - {fileID: 2070446941}
+  - {fileID: 600693367}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

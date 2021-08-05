@@ -46,6 +46,11 @@ public class Hero : MonoBehaviour
     /// </summary>
     private GameObject lastTriggerGo = null;
 
+    // Объявление нового делегата типа WeaponFireDelegate
+    public delegate void WeaponFireDelegate();
+    // Создать поле типа WeaponFireDelegate
+    public WeaponFireDelegate fireDelegate;
+
     private void Awake()
     {
         if (S == null)
@@ -56,6 +61,7 @@ public class Hero : MonoBehaviour
         {
             Debug.LogError("Hero.Awake() - Попытка назначить второго Hero.S!");
         }
+        //fireDelegate += TempFire;
     }
     // Start is called before the first frame update
     void Start()
@@ -79,10 +85,17 @@ public class Hero : MonoBehaviour
         // Повернуть корабль, чтобы придать ощущение динамики
         transform.rotation = Quaternion.Euler(yAxis * pichMult, xAxis * rollMult,0);
 
-        // Позволить кораблю выстрелить
-        if (Input.GetKeyDown(KeyCode.Space))
+        //// Позволить кораблю выстрелить
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TempFire();
+        //}
+
+        // Произвести выстрел из всех видов оружия вызовом fireDelegate
+        // Проверить нажатие кнопки 'Jump' (пробел) и убедиться что fireDelegate != null
+        if(Input.GetAxis("Jump") == 1 && fireDelegate != null)
         {
-            TempFire();
+            fireDelegate();
         }
     }
 
@@ -91,7 +104,12 @@ public class Hero : MonoBehaviour
         GameObject projGo = Instantiate<GameObject>(projectilePerfab);
         projGo.transform.position = transform.position;
         Rigidbody rigitB = projGo.GetComponent<Rigidbody>();
-        rigitB.velocity = Vector3.up * projectileSpeed;
+        //rigitB.velocity = Vector3.up * projectileSpeed;
+
+        Projectile proj = projGo.GetComponent<Projectile>();
+        proj.type = Weapon.WeaponType.blaster;
+        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
+        rigitB.velocity = Vector3.up * tSpeed;
     }
 
     private void OnTriggerEnter(Collider other)

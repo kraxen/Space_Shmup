@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public float health = 10; // Здоровье
     public int score = 100; // Очки за уничтожение этого корабля
 
-    private BoundsCheck bndCheck;
+    protected BoundsCheck bndCheck;
 
     /// <summary>
     /// Свойство для доступа к позиции
