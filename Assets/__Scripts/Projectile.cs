@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     private BoundsCheck bndCheck;
     private Renderer rend;
 
-    [Header("Set Dynamicly"]
+    [Header("Set Dynamicly")]
     public Rigidbody rigit;
 
     [SerializeField]

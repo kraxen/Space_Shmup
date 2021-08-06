@@ -9,7 +9,7 @@ public class Enemy_2 : Enemy
     public float sinEccentricity = 0.6f;
     public float lifeTime = 10;
 
-    [Header("Set Dynamicly: Enemy_2")]
+    [Header(": Enemy_2")]
     // Enemy_2 использует линейную интерпол€цию между двум€ точками, измен€€ результат по синусоиде
     public Vector3 p0;
     public Vector3 p1;
